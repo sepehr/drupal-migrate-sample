@@ -1,0 +1,11 @@
+name = "Fuckin Damn Migration Sample Module"
+description = "Migrates nodes, taxonimies, users, image_attach nodes and attachment files from the old **** website."
+package = "Migration"
+core = 7.x
+
+dependencies[] = migrate
+dependencies[] = migrate_d2d
+
+files[] = node.inc
+files[] = picture.inc
+files[] = migrate_d2d_sample.migrate.inc

@@ -1,12 +1,12 @@
 <?php
 /**
- * @file migrate_d2d_ieimil.migrate.inc
+ * @file migrate_d2d_sample.migrate.inc
  */
 
 /**
  * Implements hook_migrate_api().
  */
-function migrate_d2d_ieimil_migrate_api() {
+function migrate_d2d_sample_migrate_api() {
 
   // --------------------------------------------------------------------------
   // Init
@@ -15,8 +15,8 @@ function migrate_d2d_ieimil_migrate_api() {
     'api'        => 2,
     'migrations' => array(),
     'groups'     => array(
-      'ieimil' => array(
-        'title' => t('IEIMil Migrations (English)'),
+      'sample' => array(
+        'title' => t('Sample D2D Migrations'),
       ),
     ),
   );
@@ -24,7 +24,7 @@ function migrate_d2d_ieimil_migrate_api() {
   $common_arguments = array(
     'source_connection' => 'legacy',
     'source_version'    => 6,
-    'group_name'        => 'ieimil',
+    'group_name'        => 'sample',
 
     'source_database'   => array(
       'driver'   => 'mysql',
@@ -74,7 +74,7 @@ function migrate_d2d_ieimil_migrate_api() {
   // --------------------------------------------------------------------------
   $api['migrations']['MigrateLegacyImages'] = $common_arguments + array(
   	// See: picture.inc:
-    'class_name'        => 'IeimilPictureMigration',
+    'class_name'        => 'SamplePictureMigration',
     'description'       => t('Import image_attach pictures'),
     'default_uid'       => 1,
     'source_dir'        => '',
@@ -88,7 +88,7 @@ function migrate_d2d_ieimil_migrate_api() {
   // --------------------------------------------------------------------------
   $api['migrations']['MigrateLegacyNodes_Products'] = $common_arguments + array(
   	// See: node.inc:
-    'class_name'        => 'IeimilProductMigration',
+    'class_name'        => 'SampleProductMigration',
     'description'       => t('Migration of Product nodes from Drupal 6'),
     'source_type'       => 'product',
     'destination_type'  => 'products',

@@ -3,7 +3,7 @@
 /**
  * Image-specific mappings and handling.
  */
-class IeimilProductMigration extends DrupalNode6Migration {
+class SampleProductMigration extends DrupalNode6Migration {
 
   /**
    * Constructor

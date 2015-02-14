@@ -2,7 +2,7 @@
 /**
  * Migrates D6 image_attach nodes to D7 image fields.
  */
-class IeimilPictureMigration extends DrupalFile6Migration {
+class SamplePictureMigration extends DrupalFile6Migration {
 
   /**
    * Constructor

@@ -1,0 +1,9 @@
+<?php
+
+/**
+ * @file migrate_d2d_sample.module
+ */
+
+//
+// See migrate_d2d_sample.migrate.inc
+//
